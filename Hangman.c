@@ -196,6 +196,8 @@ int play(char *word,char *word2,int hang){
     }
     return 0;
 }
+
+// My custom name printer
 void name(char *word,int ip){
     int jk;
     char* pa=word;
@@ -316,6 +318,8 @@ void begin(){
     bike();
     play(word_main,start,1);
 }
+
+// All these functions below are for custom name printing #Hard-coded
 void nothing(int line){
     printf("          ");
 }
