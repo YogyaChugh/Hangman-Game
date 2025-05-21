@@ -33,36 +33,33 @@ void y(int line);
 void z(int line);
 void _(int line);
 void bike();
+void begin();
 void nothing(int line);
-void trophy(int line);
 int play(char *word,char *word2,int hang);
 int main(){
-    char main1[20]="hangman";
-    char charac;
-    char* chosen[20]={"lion","abiding","apple","achieve","poison","simple","cave","noise","trade","parents","love","time","freedom","hacker","joker","watch","glass","water","market","gaming"};
-    char start[10]="";
-    int i=1,j,pw,lol;
-    srand(time(0));
-    lol=rand()%20;
-    char word_main[10];
-    strcpy(word_main,chosen[lol]);
-    int lp=strlen(word_main);
-    char a[20]="hangman";
-    char word[6]="Hello";
-    int guess=sizeof(word)+1;
-    printf("\n\n");
-    int l=rand()%4;
-    for (pw=0;pw<lp;pw++){
-        strcat(start,"_");
+    int j;
+    system("cls");
+    intro("hangman",0);
+    printf("                                                           LOADING LIBRARIES");
+    for (j=0;j<4;j++){
+        printf(".");
+        sleep(1);
     }
     system("cls");
-    intro(main1,0);
-    printf("PRESS ANY KEY TO CONTINUE: ");
-    scanf("%c",&charac);
+    intro("hangman",0);
+    printf("                                                           FETCHING WORDS");
+    for (j=0;j<4;j++){
+        printf(".");
+        sleep(1);
+    }
     system("cls");
-    bike();
-    play(word_main,start,1);
-    return 0;
+    intro("hangman",0);
+    printf("                                                           SYNCING");
+    for (j=0;j<4;j++){
+        printf(".");
+        sleep(1);
+    }
+    begin();
 }
 void intro(char *word,int sal){
     int i=0 ,j,length=strlen(word),p,count=0;
@@ -71,9 +68,9 @@ void intro(char *word,int sal){
     char* incomplete1[23]={" ___________.._______","| .__________))______|","| | / /      ||","| |/ /       ||","| | /        ||     ","| |/         ||       ","| |          ||      ","| |                ","| |                ","| |                 ","| |                 ","| |                   ","| |                    ","| |               ","| |               ","| |               ","| |               ","| |                 ","''''''''''|_`-' `-' |'''|","|'|'''''''\\ \\       ''|'|","| |        \\ \\        | |",": :         \\ \\       : : ",". .          `'       . ."};
     char* incomplete2[23]={" ___________.._______","| .__________))______|","| | / /      ||","| |/ /       ||","| | /        ||.-''.","| |/         |/  _  \\","| |          ||  ~/,|","| |          (\\`_.'","| |                ","| |                 ","| |                 ","| |                   ","| |                    ","| |               ","| |               ","| |               ","| |               ","| |                 ","''''''''''|_`-' `-' |'''|","|'|'''''''\\ \\       ''|'|","| |        \\ \\        | |",": :         \\ \\       : : ",". .          `'       . ."};
     char* incomplete3[23]={" ___________.._______","| .__________))______|","| | / /      ||","| |/ /       ||","| | /        ||.-''.","| |/         |/  _  \\","| |          ||  ~/,|","| |          (\\`_.'","| |         .-`--'.","| |         Y . . Y ","| |          |   |  ","| |          | . |    ","| |          |   |     ","| |               ","| |               ","| |               ","| |               ","| |                ","''''''''''|_`-' `-' |'''|","|'|'''''''\\ \\       ''|'|","| |        \\ \\        | |",": :         \\ \\       : : ",". .          `'       . ."};
-    char* incomplete4[23]={" ___________.._______","| .__________))______|","| | / /      ||","| |/ /       ||","| | /        ||.-''.","| |/         |/  _  \\","| |          ||  ~/,|","| |          (\\`_.'","| |         .-`--'.","| |         Y . . Y ","| |       // |   |  ","| |      //  | . |    ","| |     ')   |   |     ","| |               ","| |               ","| |               ","| |               ","| |                ","''''''''''|_`-' `-' |'''|","|'|'''''''\\ \\       ''|'|","| |        \\ \\        | |",": :         \\ \\       : : ",". .          `'       . ."};
-    char* incomplete5[23]={" ___________.._______","| .__________))______|","| | / /      ||","| |/ /       ||","| | /        ||.-''.","| |/         |/  _  \\","| |          ||  ~/,|","| |          (\\`_.'","| |         .-`--'.","| |        /Y . . Y\\\\","| |       // |   | \\\\","| |      //  | . |  \\\\","| |     ')   |   |   (`","| |               ","| |               ","| |               ","| |               ","| |                ","''''''''''|_`-' `-' |'''|","|'|'''''''\\ \\       ''|'|","| |        \\ \\        | |",": :         \\ \\       : : ",". .          `'       . ."};
-    char* incomplete6[23]={" ___________.._______","| .__________))______|","| | / /      ||","| |/ /       ||","| | /        ||.-''.","| |/         |/  _  \\","| |          ||  ~/,|","| |          (\\`_.'","| |         .-`--'.","| |        /Y . . Y\\\\","| |       // |   | \\\\","| |      //  | . |  \\\\","| |     ')   |   |   (`","| |          ||'  ","| |          ||   ","| |          ||   ","| |          ||   ","| |         / |     ","''''''''''|_`-' `-' |'''|","|'|'''''''\\ \\       ''|'|","| |        \\ \\        | |",": :         \\ \\       : : ",". .          `'       . ."};
+    char* incomplete4[23]={" ___________.._______","| .__________))______|","| | / /      ||","| |/ /       ||","| | /        ||.-''.","| |/         |/  _  \\","| |          ||  ~/,|","| |          (\\`_.'","| |         .-`--'.","| |        /Y . . Y ","| |       // |   |  ","| |      //  | . |    ","| |     ')   |   |     ","| |               ","| |               ","| |               ","| |               ","| |                ","''''''''''|_`-' `-' |'''|","|'|'''''''\\ \\       ''|'|","| |        \\ \\        | |",": :         \\ \\       : : ",". .          `'       . ."};
+    char* incomplete5[23]={" ___________.._______","| .__________))______|","| | / /      ||","| |/ /       ||","| | /        ||.-''.","| |/         |/  _  \\","| |          ||  ~/,|","| |          (\\`_.'","| |         .-`--'.","| |        /Y . . Y\\ ","| |       // |   | \\\\","| |      //  | . |  \\\\","| |     ')   |   |   (`","| |               ","| |               ","| |               ","| |               ","| |                ","''''''''''|_`-' `-' |'''|","|'|'''''''\\ \\       ''|'|","| |        \\ \\        | |",": :         \\ \\       : : ",". .          `'       . ."};
+    char* incomplete6[23]={" ___________.._______","| .__________))______|","| | / /      ||","| |/ /       ||","| | /        ||.-''.","| |/         |/  _  \\","| |          ||  ~/,|","| |          (\\`_.'","| |         .-`--'.","| |        /Y . . Y\\ ","| |       // |   | \\\\","| |      //  | . |  \\\\","| |     ')   |   |   (`","| |          ||'  ","| |          ||   ","| |          ||   ","| |          ||   ","| |         / |     ","''''''''''|_`-' `-' |'''|","|'|'''''''\\ \\       ''|'|","| |        \\ \\        | |",": :         \\ \\       : : ",". .          `'       . ."};
     while (i<23){
         if (sal==0){
             printf("%s",complete[i]);
@@ -113,25 +110,25 @@ void intro(char *word,int sal){
         }
         if ((i==6)||(i==7)||(i==8)||(i==9)||(i==10)){
             if (i==6){
-                printf("                            ");
+                printf("                       ");
             }
             else if ((i==7)||(i==8)){
-                printf("                              ");
+                printf("                         ");
             }
             else if (((i==9)||(i==10))&&(count==0)){
-                printf("                             ");
+                printf("                        ");
             }
             else if (((i==9)||(i==10))&&(count==2)){
-                printf("                            ");
+                printf("                       ");
             }
             else if (((i==9)||(i==10))&&(count==3)){
-                printf("                              ");
+                printf("                         ");
             }
             else if (i==9){
-                printf("                             ");
+                printf("                        ");
             }
             else{
-                printf("                            ");
+                printf("                       ");
             }
             name(word,i-5);
         }
@@ -177,7 +174,7 @@ int play(char *word,char *word2,int hang){
             printf("Wanna play again? (y/n) : ");
             scanf(" %c",&tell);
             if (tell=='y'){
-                main();
+                begin();
             }
             else{
                 exit(1);
@@ -192,7 +189,7 @@ int play(char *word,char *word2,int hang){
     printf("Wanna play again? (y/n) : ");
     scanf(" %c",&tell);
     if (tell=='y'){
-        main();
+        begin();
     }
     else{
         exit(1);
@@ -206,9 +203,6 @@ void name(char *word,int ip){
     for (jk=0;jk<pq;jk++){
             if (word[jk]==' '){
                 printf("          ");
-            }
-            else if (word[jk]==','){
-                trophy(ip);
             }
             else if (word[jk]=='a'){
                 a(ip);
@@ -299,40 +293,31 @@ void name(char *word,int ip){
             printf("    ");
         }
     }
+void begin(){
+    char main1[20]="hangman";
+    char charac;
+    char* chosen[65]={"lion","abiding","apple","achieve","poison","simple","cave","noise","trade","parents","love","time","freedom","hacker","joker","watch","glass","water","market","gaming","ceiling","defence","chicken","arrival","company","driving","fishing","cartoon","nuclear","library","operation","magic","protein","teacher","storage","gym","scooter","village","doctor","camera","smell","clock","budget","client","church","actor","credit","degree","strike","cream","crowd","dance","human","glorious","spices","crocodile"};
+    char start[10]="";
+    int i=1,j,pw,lol;
+    srand(time(0));
+    lol=rand()%66;
+    char word_main[10];
+    strcpy(word_main,chosen[lol]);
+    int lp=strlen(word_main);
+    char a[20]="hangman";
+    char word[6]="Hello";
+    int guess=sizeof(word)+1;
+    printf("\n\n");
+    int l=rand()%4;
+    for (pw=0;pw<lp;pw++){
+        strcat(start,"_");
+    }
+    system("cls");
+    bike();
+    play(word_main,start,1);
+}
 void nothing(int line){
     printf("          ");
-}
-void trophy(int line){
-    if (line==1){
-        printf("  ___________  ");
-    }
-    else if (line==2){
-        printf(" '._==_==_=_.' ");
-    }
-    else if (line==3){
-        printf(" .-\\:      /-. ");
-    }
-    else if (line==4){
-        printf("| (|:.     |) |");
-    }
-    else if (line==5){
-        printf(" '-|:.     |-' ");
-    }
-    else if (line==6){
-        printf("   \\::.    /   ");
-    }
-    else if (line==7){
-        printf("    '::. .'    ");
-    }
-    else if (line==8){
-        printf("      ) (      ");
-    }
-    else if (line==9){
-        printf("    _.' '._    ");
-    }
-    else if (line==10){
-        printf(" `'''''''`     ");
-    }
 }
 void _(int line){
     printf("__________");
@@ -618,29 +603,12 @@ void z(int line){
     }
 }
 void bike(){
-    int i,j;
-    for (i=0;i<70;i++){
-        j=70-i;
-        for (;j>0;j--){
-            printf(" ");
-        }
-        printf("           \n");
-        j=50-i;
-        for (;j>0;j--){
-            printf(" ");
-        }
-        printf("        D/_\n");
-        j=50-i;
-        for (;j>0;j--){
-            printf(" ");
-        }
-        printf("        /(_`._,-.\n");
-        j=50-i;
-        for (;j>0;j--){
-            printf(" ");
-        }
-        printf("_____(o) `--'(o)____");
-        sleep(0.3);
-        system("cls");
+    int i;
+    printf("                                                              Generating word");
+    for (i=0;i<5;i++){
+        printf(".");
+        sleep(1.5);
     }
+    printf("\n");
+    sleep(2);
 }
